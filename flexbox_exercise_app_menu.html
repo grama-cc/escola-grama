@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Grama</title>
+    	<style type="text/css">
+    	header nav ul li {
+    		padding: 10px;
+    		margin:3%;
+    		background-color: white;
+    		margin-left: 0px;
+    		padding-right: 10px;
+    	}
+	     
+      header nav ul {
+        display: none;
+      }
+
+      header nav:hover ul {
+        display: block;
+      }
+      
+      header {
+        display: flex;
+        background-color: blue;
+      }
+
+		  header nav ul li a {
+			 color: blue;
+			 font-family: "helvetica", arial;
+		  }
+
+    	a{ 
+    		text-decoration: none;
+    	 }
+
+      ul{
+          list-style: none;
+       }
+
+      .gallery {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+      .gallery-footer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      
+      div.gallery2 img{
+        display: none;
+      }
+
+      .gallery2 img ul{
+        width: 200px;
+        height:200px;
+      }
+
+      .gallery img{
+        width: 200px;
+        height:200px;
+      }
+      
+      .gallery2 {
+        background-color: #ccc;
+        display: block;
+        flex-direction: column;
+        flex-wrap: wrap;
+      }
+
+      .gallery_inside{
+        background-color: blue;
+        display: block;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+        </style>
+  </head>
+  <body>
+    <header>
+          <nav>
+            Menu
+            <ul>
+              <li><a href="info.html">settings</a></li>
+              <li><a href="info.html">setando isso</a></li>
+              <li><a href="info.html">setando aquilo</a></li>
+            </ul>
+          </nav> 
+      </header>
+
+      <div class="gallery">
+        <ul>
+          <li>listando tudo, colina 1</li>
+          <li>listando tudo, colina 1</li>
+          <li>listando tudo, colina 1</li>
+        </ul>
+        <ul>
+          <li>listando tudo, colina 2</li>
+          <li>listando tudo, colina 2</li>
+          <li>listando tudo, colina 2</li>
+        </ul>
+        <ul>
+          <li>listando tudo, colina 3</li>
+          <li>listando tudo, colina 3</li>
+          <li>listando tudo, colina 3</li>
+        </ul>
+      </div>
+    
+    <div class="gallery">
+      <img src="global.png" alt="global">
+      <img src="global.png" alt="global">
+      <img src="global.png" alt="global">
+      <img src="global.png" alt="global">
+      <img src="global.png" alt="global">
+      <img src="global.png" alt="global">
+    </div>
+    
+    <div class="gallery2">
+        <img src="global.png">
+          <ul class="gallery_inside">
+            <li><img src="global.png" alt=""></li>
+            <li><img src="global.png" alt=""></li>
+            <li><img src="global.png" alt=""></li>
+            <li><img src="global.png" alt=""></li>
+            <li><img src="global.png" alt=""></li>
+            <li><img src="global.png" alt=""></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+       
+       <footer class="gallery-footer">
+         Primeira Lista
+         <ul>
+          <li><a href="list.html">footer</a></li>
+          <li><a href="list.html">footer</a></li>
+          <li><a href="list.html">footer</a></li>
+         </ul>
+         Segunda Lista
+         <ul>
+          <li><a href="list.html">footer</a></li>
+          <li><a href="list.html">footer</a></li>
+          <li><a href="list.html">footer</a></li>
+         </ul>
+         <ul>
+          Terceira Lista
+          <li><a href="list.html">footer</a></li>
+          <li><a href="list.html">footer</a></li>
+          <li><a href="list.html">footer</a></li>
+         </ul>
+       </footer>
+    
+
+   </body>
+</html>
+
+
+
+
+
+
+
+
+
+
