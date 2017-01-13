@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+body {
+    margin:0;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+}
+
+ul {
+
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(234, 12, 122);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-flow: space-between;
+
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #6400FF;
+}
+
+/*.ul:hover .modal {
+    display: block;
+}*/
+
+.modal {
+    /*display: none;*/
+    position: fixed;
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    flex-flow: space-between;
+    background-color: yellow;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+    /*-webkit-animation: bounceInUp 1s;
+    -webkit-animation-delay: .1s;
+    animation: bounceinup 1s;
+    animation-delay: .1s;
+}
+
+/* 
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+*/
+
+@-webkit-keyframes animatetop {
+    0% {
+       opacity: 0;
+       -webkit-transform: translateY(-2000px);
+    }
+    60% {
+       opacity: 1;
+       -webkit-transform: translateY(30px);
+    }
+    80% {
+       -webkit-transform: translateY(-30px);
+    }
+    100% { 
+       -webkit-transform: translateY(0);
+    }
+}
+         
+@keyframes animatetop {
+    0% {
+       opacity: 0;
+       transform: translateY(-2000px);
+    }
+    60% {
+       opacity: 1;
+       transform: translateY(30px);
+    }
+    80% {
+       transform: translateY(-30px);
+    }
+    100% {
+       transform: translateY(0);
+    }
+}
+
+
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+.modal-body {
+  padding: 2px 16px;
+}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+
+
+
+</style>
+</head>
+<body>
+
+<script>
+
+var modal = document.getElementById('myModal');
+
+
+var btn = document.getElementById("myBtn");
+
+
+var span = document.getElementsByClassName("close")[0];
+
+
+btn.onclick = function() {
+    modal.style.display = block;
+    /*modal.style.flex-direction = column;*/
+    /*modal.style.flex-flow = space-between;*/
+}
+
+
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+<ul>
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
+
+<div style="padding:20px;margin-top:30px;background-color:white;height:1500px;">
+<h1>Fixed Top Navigation Bar</h1>
+<button id="myBtn">Open Modal</button>
+<h2>Scroll this page to see the effect</h2>
+<h2>The navigation bar will stay at the top of the page while scrolling</h2>
+
+<div id="myModal" class="modal">
+
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>OLAAAAAA Enfermeira</h2>
+    </div>
+    <div class="modal-body">
+      <p>In the beginning, Looney Tunes and Merrie Melodies drew their storylines from Warner's vast music library. From 1934 to 1943, Merrie Melodies were produced in color and Looney Tunes in black and white. After 1943, both series were produced in color and became virtually indistinguishable, varying only in their opening theme music and titles. Both series made use of the various Warner Bros. cartoon characters. By 1937, the theme music for Looney Tunes was "The Merry-Go-Round Broke Down" by Cliff Friend and Dave Franklin, and the theme music for Merrie Melodies was an adaptation of "Merrily We Roll Along" by Charles Tobias, Murray Mencher and Eddie Cantor.</p>
+    </div>
+    <div class="modal-footer">
+      <h3>E por hoje é só pessoal</h3>
+    </div>
+  </div>
+
+</div>
+
+<p>Some text some text some text some text..</p>
+<p>Some text some text some text some text..</p>
+<p>Some text some text some text some text..</p>
+<p>Some text some text some text some text..</p>
+<p>Some text some text some text some text..</p>
+<p>Some text some text some text some text..</p>
+<p>Some text some text some text some text..</p>
+<p>Some text some text some text some text..</p>
+<p>Some text some text some text some text..</p>
+<p>Some text some text some text some text..</p>
+<p>Some text some text some text some text..</p>
+<p>Some text some text some text some text..</p>
+<p>Some text some text some text some text..</p>
+<p>Some text some text some text some text..</p>
+<p>Some text some text some text some text..</p>
+<p>Some text some text some text some text..</p>
+<p>Some text some text some text some text..</p>
+<p>Some text some text some text some text..</p>
+<p>Some text some text some text some text..</p>
+<p>Some text some text some text some text..</p>
+</div>
+
+</body>
+</html>

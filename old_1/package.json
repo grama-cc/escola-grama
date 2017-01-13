@@ -1,0 +1,26 @@
+{
+  "name": "escola-grama_marina",
+  "version": "1.0.0",
+  "description": "CSS for designers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "batata": "./node_modules/.bin/gulp batata",
+    "watch": "./node_modules/.bin/gulp watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grama-cc/escola-grama.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/grama-cc/escola-grama/issues"
+  },
+  "homepage": "https://github.com/grama-cc/escola-grama#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.3.2",
+    "gulp-sass": "^3.1.0"
+  }
+}

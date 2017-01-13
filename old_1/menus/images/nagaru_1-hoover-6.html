@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<!-- saved from url=(0082)file:///Users/marinaavila/Desktop/escola-grama/menus/nagaru/nagaru_1-hoover-6.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <style>
+
+  body{
+  	margin:0;
+  }
+
+
+  ul{
+  	list-style-type: none;
+    margin: 0;
+    padding:0;
+  
+  }
+
+  a{
+    text-decoration: none;
+  }
+
+  .header{
+    top: 0;
+    width: 100%;
+    box-sizing: border-box;
+    position: fixed;
+    top:0;
+
+    background-color: blue;
+    padding: 14px 16px;
+  }
+
+
+  .menu-hoover{
+
+    	display: none; 
+    	/*block*/
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        background-color: rgb(234, 12, 122);
+        width: 33%;
+        font-family: 'Open Sans', Helvetica, sans-serif;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 0.875em;
+  }
+
+  .menu{
+  	display: none;
+  }
+
+  .menu-hoover li{
+    padding:0;
+  }
+
+  .menu-hoover li a{
+  	display: block;
+  	padding: 14px 16px;
+  	color: white;
+  	width: 100%
+
+  }
+
+
+  header img, nav img{
+  	width: 15%;
+  }
+
+  header ul{
+  	display: flex;
+  	/*flex-direction: row;*/
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+
+  }
+
+  header ul.header li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .body{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+  }
+
+  #timeline{
+    background-color: red;
+    width: 90%;
+    margin-top: 100px;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 24px;
+    color: black;
+
+  }
+
+  #timeline a {
+    color: black;
+  }
+
+  .post{
+    background-color: blue;
+
+
+  }
+
+  .post-header{
+    background-color: yellow;
+    display: flex;
+    /*flex-direction: row;*/
+    justify-content: space-between;
+    align-items: center;
+    align-content: flex-start;
+    margin:20px;
+
+  }
+
+
+  .user-info{
+    background-color: purple;
+    width: 60%;
+    display: flex;
+    /*flex-direction: row;*/
+    justify-content: space-between;
+    align-items: center;
+    align-content: flex-start;
+
+  }
+
+  .user-info img{
+    border-radius: 50%;
+
+  }
+
+
+  .user-about img{
+    width: 5%;
+  }
+
+  .user-about {
+    margin-left: 20px;
+  }
+
+  .user-about li:last-child{
+    margin-bottom: 0;
+
+  }
+
+  .user-about li:first-child{
+    margin-bottom: 15px;
+
+  }
+
+  .user-picture img{
+    border:5px solid orange;
+    width: 150px;
+  }
+
+  .user-picture p{
+    margin:0;
+    /*??*/
+  }
+
+  .user-name{
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .user-time{
+    margin-bottom: 10px;
+  }
+
+  .user-place{
+    margin-bottom: 10px;
+  }
+
+  .user-name img{
+    margin-left: 10px;
+  }
+
+  .user-place img, .user-time img{
+    margin-right: 10px;
+
+  }
+
+  .user-stars img{
+    width: 160px;
+    border-radius: 50%;
+
+  }
+
+
+  .post-image{
+    /*background-color: green;*/
+    background-image: url('tigre.jpg');
+    height: 700px;
+    background-position: center;
+  }
+
+  .post-footer{
+    padding-bottom: 200px;
+    /*retirar padding depois*/
+    margin: 20px;
+    
+  }
+
+  .post-footer img{
+    width: 15%;
+  }
+
+  .post-footer-header{
+    display: flex;
+    background-color: gray;
+    justify-content: space-between;
+
+
+  }
+
+  .pfr-wohoo-nagaru{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: red;
+
+  }
+
+  .Whohoo a, .Nagaru a{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .Whohoo a img, .Nagaru a img{
+       margin-right: 15px;
+
+  }
+
+  .megaphone{
+    background-color: purple;
+    /*display: flex;
+    justify-content: flex-end;*/
+  }
+
+
+  .post-footer-text{
+  }
+
+  hr{
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 20px 30px;
+
+  }
+
+
+  .menu-footer{
+    position: fixed;
+    bottom: 0;
+
+    width: 100%;
+    box-sizing: border-box;
+
+    background-color: blue;
+    padding: 14px 16px;
+  }
+
+    nav ul{
+    display: flex;
+    /*flex-direction: row;*/
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+
+  }
+
+    nav ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+
+
+
+  </style>
+
+ </head>
+
+ <body>
+
+  <header>
+
+    <ul class="header">
+      <li><img src="./nagaru_1-hoover-6_files/icone.png" alt="#">
+      </li>
+      <li class="menu-imagem-centro"><img src="./nagaru_1-hoover-6_files/icone.png" alt="#">
+      </li>
+      <li class="menu-imagem-direita"><img src="./nagaru_1-hoover-6_files/icone.png" alt="#">
+      </li>
+    </ul>
+
+    <div>
+      <ul class="menu-hoover">
+      	<li><a href="file:///Users/marinaavila/Desktop/escola-grama/menus/nagaru/sobre.html">Sobre</a></li>
+      	<li><a href="file:///Users/marinaavila/Desktop/escola-grama/menus/nagaru/sobre.html">Sobre</a></li>
+      	<li><a href="file:///Users/marinaavila/Desktop/escola-grama/menus/nagaru/sobre.html">Sobre</a></li>
+      </ul>
+    </div>
+
+  </header>
+
+  <div class="body">
+  <div id="timeline">
+
+      <div class="post">
+
+      <div class="post-header">
+        <div class="user-info">
+            <div class="user-picture"><img src="./nagaru_1-hoover-6_files/user.png">
+            </div>
+            <ul class="user-about">
+              <li class="user-name"><a href="file:///Users/marinaavila/Desktop/escola-grama/menus/nagaru/nagaru_1-hoover-6.html">Lucas Carci<img src="./nagaru_1-hoover-6_files/icone.png"></a></li>
+              <li class="user-time"><a href="file:///Users/marinaavila/Desktop/escola-grama/menus/nagaru/nagaru_1-hoover-6.html"><img src="./nagaru_1-hoover-6_files/icone.png">4 horas atrás</a></li>
+              <li class="user-place"><a href="file:///Users/marinaavila/Desktop/escola-grama/menus/nagaru/nagaru_1-hoover-6.html"><img src="./nagaru_1-hoover-6_files/icone.png">Arpoador</a></li>
+            </ul>
+        </div>
+        <div class="user-stars">
+          <img src="./nagaru_1-hoover-6_files/user.png">
+        </div>
+      </div>
+
+        <div class="post-image">
+        </div>
+
+
+        <div class="post-footer">
+
+          <div class="post-footer-header">
+              <ul class="pfr-wohoo-nagaru">
+                <li class="Whohoo"><a href="file:///Users/marinaavila/Desktop/escola-grama/menus/nagaru/nagaru_1-hoover-6.html"><img src="./nagaru_1-hoover-6_files/icone.png">171 Whohoo</a></li>
+                <li class="Nagaru"><a href="file:///Users/marinaavila/Desktop/escola-grama/menus/nagaru/nagaru_1-hoover-6.html"><img src="./nagaru_1-hoover-6_files/icone.png">78.389 Nagaru</a></li>
+              </ul>
+              <div class="megaphone">
+                <img src="./nagaru_1-hoover-6_files/icone.png">
+              </div>
+          </div>
+          
+          <div class="post-footer-text">
+            <p>Lucas Carci - Desenvolvimento, planejamento, hierarquia nas informações e criação dos layouts - Web: HTML5, CSS3, wordpress, PHP e Responsive design. Marketing digital: Email Marketing, SEO, Mídias Sociais. Ferramentas: Pacote Adobe e Pacote Office. Interesse por novas mídias e acessibilidade | Interest in new medias 
+            </p>
+            <hr>
+          </div>
+
+        </div>
+
+      </div>
+  </div>
+
+
+  <nav class="menu-footer">
+      <ul>
+        <li><img src="./nagaru_1-hoover-6_files/icone.png" alt="#"></li>
+        <li><img src="./nagaru_1-hoover-6_files/icone.png" alt="#"></li>
+        <li><img src="./nagaru_1-hoover-6_files/icone.png" alt="#"></li>
+        <li><img src="./nagaru_1-hoover-6_files/icone.png" alt="#"></li>
+        <li><img src="./nagaru_1-hoover-6_files/icone.png" alt="#"></li>
+      </ul>
+  </nav>
+
+
+    </div>
+
+
+	
+  
+
+ 
+
+</body></html>
