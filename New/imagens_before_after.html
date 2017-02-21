@@ -1,0 +1,170 @@
+  		
+<!DOCTYPE html>
+<html>
+
+	<head>
+	<!-- Esse arquivo deve começar a ser lido no body =) -->
+
+		<style>
+
+		span {
+			text-transform: uppercase;
+		}
+
+		body {
+			background-image: url(images/home-background.png); 
+		}
+
+		div {
+
+			background-color: blue;
+		/*colocamos um backgound-color para que, enquanto a imagem não abre ou caso ela não abra termos uma marcação do seu lugar*/
+			background-image: url("../img/newpost-location.svg");
+			background-size: contain;
+		/*diz que a imagem vai ocupar o espaço todo da div*/
+			background-repeat: no-repeat;
+		/*a imagem será exibida somente uma vez dentro da div*/
+			width: 30px;
+			height: 30px;
+		/*Altura e largura da div*/
+			background-position: center;
+		/*Podemos colocar o background em diversas posições como:*/
+		}
+
+
+		body {
+			background-color: yellow;
+		/*colocamos um backgound-color para que, enquanto a imagem não abre ou caso ela não abra termos uma marcação do seu lugar*/
+			background-image: url(images/home-background.png); 
+			background-repeat: repeat-x;
+        /*para que a imagem repita no eixo horizontal ou "repeat-y" para que ela se repita no eixo vertical e "no-repeat" para que não se repita*/
+			background-attachment: fixed;
+		/*diz se a imagem está fixa ou vai se mexer com o movimento do scroll, o valor Default é "scroll" */
+			background-position: right top;
+		/*diz onde/se a imagem irá se fixar dentro do espaço que ela ocupa. No caso a direita no topo. */
+		} 
+
+		body {
+    		background: #ffffff url("img_tree.png") no-repeat right top;
+    	/*Também podemos escrever todas as proriedades de um background em somente uma linha. */
+		}
+
+		/*Se quisermos colocar mais de uma imagem de background fazemos da seguinte forma:*/
+
+		.element {
+		   background-image: url(bg1.png), url(bg2.png);
+		   background-position: top left, center right;
+		   background-repeat: no-repeat, no-repeat;
+		}
+
+		/*ou em uma linha só, vale reparar que a separação entre a ultima e a penultima linha desse próximo código é uma "," e não um ";"*/
+
+		.element {
+		  background:
+		     url(bg1.png) top left no-repeat,
+		     url(bg2.png) top left no-repeat;
+		}
+
+		.menu li:before{
+		/*isso quer dizer que existe um elemento antes do elemento selecionado, no caso, o "li". A mesma lógica se aplica ao "after" para elementos que viram depois.*/
+
+			content: "";
+		/*Quando usamos "before" e "after" temos sempre que começar colocando um "content", se o conteudo desses pseudo elementos for uma imagem devemos usar "" se quisermos usar algum caractere é só coloca-lo entre as ""*/
+			background-image: url("../img/newpost-location.svg");
+			background-repeat: no-repeat;
+			width: 30px;
+			height: 30px;
+			background-size: contain;
+			background-position: center;
+			}
+
+		</style>
+	</head>
+
+	<body>
+
+	<h1>Imagens</h1>
+
+	<h2>Existem 3 tipos de imagens que podem aparecer no nosso site</h2>
+
+	<ul>
+		<li>Content images - imagens de conteudo são imagens que são tão nescessárias quando o texto.
+			<p>Ex: Em um site que se propõe a vender roupas, a foto da peça ao lado do preço é tão importante quanto o preço</p>
+		</li>
+		<li>Layout images - imagens que estão no layout mas que não são nescesárias para o entendimento do conteudo de uma página.
+			<p>Ex: A imagem usada no fundo de uma página</p>	
+		</li>
+		<li>User interface images - imagens que são usadas para ajudar na interface da página, mas não são nescessárias para o funcionamento da página
+			<p>Ex: um bom exemplo disso são as "setinhas" ao lado dos itens do menu</p>
+		</li>
+	</ul>
+
+	<p>As imagens devem ser colocadas em uma pasta separada dentro da nossa pasta principal de projeto. Por isso o "src", neste caso, ficaria algo assim "images/nomedasuaimagem.png"</p>
+
+	<img src="images/nomedasuaimagem.png" alt="nomedasuaimagem">
+
+	<p>É importante ter sempre o "alt" por quetões de acessibilidade. Ele é usado por leitores de tela (screen readers), por pessoas que tem internet muito lenta e caso o "src" esteja incorreto. Ex:</p>
+
+	<img src="images/nomedasuaimagem.png" alt="nomedasuaimagem">
+
+	<p>Assim como os links as imagens podem ter "absolute paths" e "relative path". Ou seja:</p>
+
+	<img src="images/nomedasuaimagem.png" alt="nomedasuaimagem">
+
+	<img src="http://bit.ly/gatolindo" alt="imagem da internet">
+
+	<p>Caso haja algum erro de digitação ou a imagem seja retirada do ar pela pessoa que a colocou ela será apresentada desta forma:</p>
+
+	<img src="http://bit.ly/gatolinod" alt="imagem da internet">
+
+	<h2>Mas <span>onde</span> colocamos essas iamgens no nosso código?</h2>
+
+	<ul>
+		<li>Content images - já que essas imagens são parte do conteudo do site, as colocamos dentro do html
+		</li>
+		<li>Layout images - já que essas imagens fazem parte do estilo do site devemos coloca-las no css
+		</li>
+		<li>User interface images - já que essas imagens fazem parte da interface do site, ou seja, do estilo da nossa página, devemos coloca-las no css.
+		</li>
+	</ul>
+
+	<h2>Mas <span>como</span> colocamos essas imagens no nosso código?</h2>
+
+	<ul>
+		<li><h3>Content images - já que essas imagens são parte do conteudo do site, as colocamos dentro do html.</h3>
+
+		<img src="images/nomedasuaimagem.png" alt="nomedasuaimagem">
+
+		</li>
+		<li>
+			<h3>Layout images - já que essas imagens fazem parte do estilo do site devemos coloca-las no css</h3>
+			<p>Essas imagens devem entrar como "background-image", ou seja, imagem de fundo no css</p>
+
+			<p>Para que ela ocupe o corpo todo da página você pode selecionar o "body" no css procure por "body" no "head" dentro de "script" e veja como definimos a "background-image".</p>
+
+
+			<p>Se quiser que ela seja menor, localizada em uma parte especifica do site a forma mais interessante é coloca-la como "background-image" de uma "div" ou seja:</p>
+
+			<div class="layout-image"></div>
+
+			<p>Para fazer isso você deve definir alguns parametros para essa "div", procure por "div" no "head" dentro de "script"</p>
+
+		</li>
+		<li><h3>User interface images - já que essas imagens fazem parte da interface do site, ou seja, do estilo da nossa página, devemos coloca-las no css.</h3>			
+				
+		</li>
+	</ul>
+
+
+
+
+
+
+
+
+
+	
+	
+
+	</body>
+</html>

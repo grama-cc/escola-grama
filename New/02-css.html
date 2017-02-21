@@ -1,0 +1,157 @@
+  		
+<!DOCTYPE html>
+<html>
+
+	<head>
+	<!-- Esse arquivo deve começar a ser lido no body =) -->
+
+		<link rel="stylesheet" type="text/css" href="style.css">
+
+		<style>
+
+			ul {
+				color: purple;
+			}
+
+
+			ul p {
+				color: black;
+				margin: 0;
+			}
+
+			/*#id*/
+			#list {
+				font-size: 29px;
+			}
+			
+			/*.class*/
+			.item {
+				color: pink;
+			}
+
+			a:link {
+			    color: #FF0000;
+			}
+
+			/*link visitado */
+			a:visited {
+			    color: #00FF00;
+			}
+
+			/* mouse em cima do link */
+			a:hover {
+			    color: #FF00FF;
+			}
+
+			/* link selecionado */
+			a:active {
+			    color: #0000FF;
+			}
+
+
+		</style>
+	</head>
+
+	<body>
+
+	<h1>Css</h1>
+
+	<h2>O cascading Style Sheets (CSS) é uma "folha de estilo" utilizada para definir a aparência de uma página da internet. O CSS define como serão exibidos os elementos do html e é onde colocamos os estilos do site. O mais importante do css é separar a formatação do conteúdo de um documento. Ou seja:</h2>
+
+	<ul>
+		<li>html - Conteudo do site</li>
+		<li>css - Estilos do site</li>
+	</ul>
+
+	<p>Podemos colocar o .css de 3 formas diferentes no nosso arquivo.</p>
+
+	<ol>
+		<li>Inline style - Estilo na linha do html</li>
+		<li>Internal style sheet - Folha de estilo interna, dentro do .html</li>
+		<li>External style sheet - Folha de estilo externa, dentro de um arquivo .css</li>
+	</ol>
+
+	<p>Essa lista está organizada do mais especifico para o menos especifico. Portanto, um css Inline irá sobrescever um estilo de folha interna ou externa. Da mesma forma como um css escrito em folha interna irá sobrescrever um .css que esteja em folha externa.</p>
+
+	<h3>Mas como que funciona? Ok, vou explicar</h3>
+
+	<ol>
+		<li>Inline style - Estilo na linha do html
+			<p style="color: red; font-size: 19px;">Essa não é e melhor forma de se aplicar o css já que mistura estilo e conteudo. O ideal é manter conteúdo em .html e estilo em .css</p>
+		</li>
+		<li>Internal style sheet - Folha de estilo interna
+			<p>Abrimos uma tag "style" na "head" e colocamos os estilos dentro dela, você pode ver isso aplicado na "head" deste arquivo.</p>
+		</li>
+		<li>External style sheet - Folha de estilo externa
+			<p>Colocamos um "link"  na "head" - link rel="stylesheet" type="text/css" href="css/style.css" - e colocamos os estilos em um outro arquivo .css que deve estar em uma pasta "css" junto com os arquivos "html". Você pode ver o link aplicado na "head" desse arquivo e observar a organização das pastas nos nossos arquivos.</p>
+		</li>
+	</ol>
+
+	<h2>Ids e Classes</h2>
+
+	<p>Para aplicarmos o css precisamos selecionar partes do html. Podemos fazer isso usando os seletores, como "p", "ul", "li", "div", classes (class) ou Ids (identity). Não podemos ter mais de um Id em cada página. O ideal é manter as Classes e os Ids com nomes em inglês e que façam sentido na identificação posterior.</p>
+
+	<ul id="list">
+		<li>Só o estilo da Id + ul</li>
+		<li class="item">Estilo da id + Classe, já que houve conflito e a classe "item" era mais especifica, o estilo da ul foi sobreescrito </li>
+		<li> Tem algo mais?
+		<p>Como funciona a Cascata?</p>
+		</li>
+	</ul>
+
+	<p>Colocamos na "Head", dentro de "style" os estilos da Id e da Classe. A notação da Id é "#" enquanto a da Classe é "."</p>
+
+	<!-- ul {
+		color: purple;
+	}
+
+	ul p {
+		color: black;
+		margin: 0;
+	}
+
+	#list {
+		font-size: 29px;
+	}
+	
+	.item {
+		color: pink;
+	} -->
+
+	<p>Se existirem informações conflitantes, por exemplo: "Cor das "ul" é roxo" e "cor da classe ".item" é Azul" a informação que vai valer é a que é mais especifica. Caso alguma informação se repita no .css a informação que foi escrita na linha de numero mais alto vai sobreescrever a escrita anteriormente</p>
+
+	<p>Temos também o terceiro item da nossa lista. Ele está em preto já que dissemos que todos os "p" dentro de "ul"s devem estar em preto. Por isso o ponto e o texto anterior continuam em roxo enquanto a segunda pergunta está em preto.</p>
+
+	<h3>Mas por que ele você colocou "margin: 0;" no "ul p"?</h3>
+
+	<p>Muitos dos seletores tem alguns estilos que vem independente de nós colocarmos. Um bom exemplo disso é o "p". Para que ele fique com a mesma distancia dos outros itens da "ul" devemos zerar a "margin" ou seja, a margem. Uma experiencia bacana é comentar ("command" + "/") a linha 19 do código, ou seja o "margin: 0;" dentro do "style" que está dentro do "head" e atualizar a página no seu browser para ver o que acontece.</p>
+
+	<h2>Pseudo-classes</h2>
+
+	<p>As peseudo-classes são classes que os nossos elementos recebem automaticamnete devido ao seu estado. Alguns exemplos de pseudo-classes são: visted (link visitado), hover (mouse em cima do link) e active (link selecionado, clicando nele)</p>
+
+<!-- 	
+	/*link visitado */
+	a:visited {
+	    color: #00FF00;
+	}
+
+	/* mouse em cima do link */
+	a:hover {
+	    color: #FF00FF;
+	}
+
+	/* link selecionado, clicando nele */
+	a:active {
+-->
+
+	<p>Aplicamos as pseudo-classes ao "a" <a href="pizza.html">link de pseudo-classes</a></p>
+	</body>
+
+	<h2>Pseudo-selectors</h2>
+
+
+
+</html>
+
+

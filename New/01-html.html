@@ -1,0 +1,96 @@
+<!-- html ou Hipertext Markup Language -->
+<!-- Os textos em cinza caracterizam os "comentários". Para fazer um comentário no sublime é só clicar na linha e usar o "command" + "/" e para "descomentar" também. Os comentários não são lidos pelo browser(navegador) e servem para deixar observações no código.  -->
+<!DOCTYPE html>
+<!-- O <!DOCTYPE html> é a primeira linha do código html. Exitem várias versões de html, essa linha diz para o navegador usar a versão mais recente. -->
+<html>
+ <!-- Todo o código html deve vir dentro de uma tag html, todas as tegas vem dentro de <>. A maioria das tags deve ser aberta e fechada, <html></html>. Existem algumas excessões como <!DOCTYPE html>, que não deve ser fechada -->
+
+	<head>
+	 Aqui é onde colocamos outros scripts -definir scripsts -como o css e o Javascript
+	 <!-- Essa linha vertical a esqueda te ajuda a saber o que está dentro da tag -->
+	 <!-- Se você tiver alguma dúvida do que está na tag em que está trabalando é só ir na linha de código onde ela começa (no caso da <head></head> é na linha "8") e passar o mouse no espaço a direita do número, aparece uma setinha. Quando você clica na setinha o sublime minimiza tudo que está naquela tag, se clicar mais uma vez, tudo volta! -->
+	</head>
+
+	<body>
+	 <!-- Aqui que colocamos todos os conteúdos visiveis -->
+	 	<h1>HTML</h1>
+	 	<h2>HTML é a sigla de HyperText Markup Language, "Linguagem de Marcação de Hipertexto". Consiste em uma linguagem  de marcação utilizada para produção de páginas na web, que permite a criação de documentos que podem ser lidos em browsers (Google Chrome, internet explorer etc) e transmitidos pela internet. Onde deve ficar o conteudo do site.</h2>
+
+		<h3>A coisa mais importante quando queremos começar um site é saber qual vai ser o conteúdo dele</h3>
+		<h4>Usamos as "Heading tags" para definir a Hierarquia dos nossos conteudos. Dentro da tag h1 a gente coloca os titulos mais importantes, como por exemplo: "Guia da pizza perfeita". Mais tarde, usaremos o css para definir tamanho, cor, tipografia entre outras caracteristicas que desejemos dar a esses títulos.</h4>
+		<h5>Dentro de h2 colocamos títulos menos importantes que, em h1, ou subtitulos</h5>
+		<h6>A gente pode continuar descendo, h4, h5, h6... até não ter importância quase nenhuma.</h6>
+
+		<p>Para escrevermos pagragrafos, anotações ou frases devemos coloca-las na tag "p".<p>
+
+		<p>Para fazer a lista de como chegarmos a pizza perfeita usamos uma "ul", unordered list ou lista não ordenada. Dentro dela devemos ter sempre "li"s. Dá uma olhada:</p>
+
+		<h3>O que precisamos para a Pizza perfeita</h3>
+
+		<ul>
+			<li>Farinha de boa qualidade</li>
+			<li>Um bom fermento</li>
+			<li>Um bom par de mãos</li>
+			<li>Ingredientes fresquinhos</li>
+			<li>Um bom queijo</li>
+			<li>Amor</li>
+		</ul>
+
+		<p>Sempre que temos uma tag, que tem outras tags dentro dela, nós a chamamos de "Parent" (pais) e a de dentro é chamada de "Child" (filho). É muito importante endentar (colocar um cadinho mas para frente no código, normalemnte usando o "tab") as "Child" para que essa relação fique bem clara.</p>
+
+		<p>Um bom exemplo é a "ul" - Parent e as "li"s - Child. Podemos ver esse bloco com clareza com a setinha da linha 22.</p>
+
+		<p>Se quisermos fazer uma lista de passos para chegar na pizza perfeita podemos usar uma "ol", ordered list, que numera a nossa lista. Nós também devemos ter "li"s dentro da nossa "ol". Saca só:</p>
+
+		<h3>Como fazer a Pizza perfeita</h3>
+
+		<ol>
+			<li>Pegar uma farinha de qualidade</li>
+			<li>Colocar uma quantidade X de água</li>
+			<li>Misturar um bom fermento</li>
+			<li>Sovar a massa com amor</li>
+		</ol>
+
+		<p>Não sabe onde pegar uma farinha de qualidade? Colocamos o link aqui</p>
+
+		<h1><a href="http:://www.google.com" target="_blank">Farinha delicia</a></h1>
+
+		<p>Podemos colocar mais de uma tag em um conteudo, aqui colocamos uma "a" dentro de uma "h1". "a" significa "anchor" ou âncora. Para que a âncora funcione você tem que dizer para onde ela deve ser direcionada, ou seja o "href". Usamos o target="_blank" para que o link abra em uma nova janela. O default(o que acontece caso não especifiquemos o traguet) é target="_self", o que faz com que a página abra na mesma janela. Temos dois tipos de href:</p>
+
+		<ul>
+			<li>para fora do nosso site (absolute path)</li>
+			<li>para dentro (relative path).</li>
+		</ul>
+
+		<p>Um bom exemplo de como usar "href" para dentro do site é no menu. Fazemos da seguinte forma:</p>
+
+  		<ul>
+  			<li><a href="A-massa-mais-gostosa.html">A massa mais gostosa</a></li>
+  			<li><a href="Sabooores.html">Sabooores</a></li>
+  			<li><a href="Fala-com-a-gente.html">Fala com a gente!</a></li>
+  		</ul>
+
+  		<p>Quando estamos programando um site fazemos uma pasta e colocamos cada seção dele em um arquivo .html diferente. O ideal é nomea-los com o nome da seção que representam como por exemplo: "contato.html" se referindo a página "contato" do site</p>
+
+  		<p>O "a" é uma tag com o display inline, isso quer dizer que um <a href="http://www.google.com.br"> link</a> entra do lado de outros elementos, o "a" não tenta acupar toda a largura da tela como uma tag "p", "ul", "li" entre outras que são tags com display block.</p>
+
+		<p>A tag "span" também é uma tag inline, usamos essa tag para <span style="color: red;">marcar</span> partes espeficicas do nosso texto e dar a elas um estilo diferente usando o css.</p>
+		
+		<div style="background-color: yellow;"><p>Uma outra tag muito utilizada para demarcar elementos é a "div", que é uma divisão genérica do cógigo. Nas "div"s nós podemos ter todo tipo de elementos. </p></div>
+
+		<p>Mas como podemos mudar o diplay block/inline</p>
+
+
+		<p>Existem marcações especificas do código para funções espeficificas do código, como por exemplo "nav", destinadas a navegação. Um menu, por exemplo, deve estar dentro de uma tag nav para que o seu código faça sentido semanticamente. Veja um exemplo de html destinado a menu:</p>
+
+		<nav>
+			<ul>
+	  			<li><a href="A-massa-mais-gostosa.html">A massa mais gostosa</a></li>
+	  			<li><a href="Sabooores.html">Sabooores</a></li>
+	  			<li><a href="Fala-com-a-gente.html">Fala com a gente!</a></li>
+	  		</ul>
+  		</nav>
+
+  		<p>Agora que sabemos um pouco mais sobre o html vamos para o arquivo <a href="02-css.html">css.html</a></p>
+	</body>
+</html>
